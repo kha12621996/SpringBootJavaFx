@@ -1,0 +1,5 @@
+org\example\demo\service\UserService.class
+org\example\demo\SpringBootApp.class
+org\example\demo\controller\MainController.class
+org\example\demo\FxApp.class
+org\example\demo\MyJavaFXApp.class

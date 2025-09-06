@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <proxies>
+        <proxy>
+            <active>true</active>
+            <protocol>http</protocol>
+            <host>172.20.249.23</host>
+            <port>8080</port>
+            <nonProxyHosts>*.fisp.dev|*.f-i-sp.int</nonProxyHosts>
+        </proxy>
+    </proxies>
+
+    <mirrors>
+        <mirror>
+            <id>fisp-maven-central</id>
+            <name>Zentralnexus (FI-SP interner "Mirror"/Proxy für Open Source Repos im Internet)</name>
+            <url>https://repo.fisp.dev/repository/maven-central/</url>
+            <mirrorOf>external:*</mirrorOf>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>ohneProjektNexus</id>
+            <repositories>
+                <repository>
+                    <id>fisp-maven-central</id>
+                    <url>https://repo.fisp.dev/repository/maven-central/</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+</settings>
